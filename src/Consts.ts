@@ -1,0 +1,1 @@
+export const API_URL = "https://pkmntcgapi-production.up.railway.app" as const

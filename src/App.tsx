@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import DecklistCreator from './pokemon/DecklistCreator'
+import { Card } from './pokemon/Models';
+
+let card : Card = { name: "test", set: "test", number: "", imageLink: "https://pkmn-tcg-api-images.sfo2.cdn.digitaloceanspaces.com/Brilliant%20Stars/en_US/arceus%20v%20166.png", deckCount: 4};
+let cardArray : Card[] = []
+cardArray.push(card);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <DecklistCreator cards={cardArray}/>
     </div>
   );
 }
